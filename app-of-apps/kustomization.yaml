@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: go-femagrot 
+  janus-idp.io/tekton: go-femagrot
+  backstage.io/kubernetes-id: go-femagrot
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-femagrot
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
